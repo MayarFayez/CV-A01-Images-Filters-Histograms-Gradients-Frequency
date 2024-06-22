@@ -133,6 +133,79 @@ The process that changes the range of pixel intensity values to be from 0 to 1
 we normalize a color input image using min-max norm. The image pixel values are
 normalized to a range [0,1]  
 
+### 4. Local and Global Thresholding:
+In global thresholding, each pixel value in the image is compared with a single 
+(global) threshold value( higher than the threshold the pixel value will be 1 
+otherwise it will be 0). In local thresholding the same happens however the image 
+is divided into parts each part has its own threshold based on the pixel values in 
+that part.    
+![Screenshot (1459)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/64b1c838-9064-4369-a3c5-7440dfedbbe0)  
+
+#### Algorithm
+In global thresholding algorithm we create an empty array as the same size as the 
+image and we calculate the median of an image as our threshold we loop over 
+pixels values to decide each pixel value (either 1 or 0). In local thresholding we do 
+the same to each part of the image.  
+### o RGB Channels:
+We read image in color mood and split it to 3 channel ,then plot them.
+o RGB Channels & Cumulative curves for input image.  
+![Screenshot (1460)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/0430652b-6b91-4cea-9b6c-531a9f3d63bc)  
+o Cumulative Curve for Equalized image  
+![Screenshot (1461)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/176dbb5e-9fe2-4a54-a7d7-34270c6cda62) 
+
+# Tab3:
+• Frequency Domain Filter  
+• Hybrid Images  
+
+### Frequency Domain Filter:
+• First transform the image F(u,v) = F{f(u,v0} into frequency
+domain using fourier’s transform.  
+• Multiply the filter H(u,v).  
+• Take the inverse fourier’s transform g(x,y) = f-1
+{g(u,v)}.  
+#### 1. Ideal Low Pass Filter
+Low frequency components are located at corners, we shift them first to the center then apply the filter. The filter 
+eliminates all high frequencies and the resulted image is smoothed.  
+![Screenshot (1462)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/794eb1d7-24bd-40fb-9e13-0a8c859758ce)  
+Result     
+![Screenshot (1463)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/5d9442fe-888a-41c2-afeb-00f36545fe6b)  
+#### 2. Ideal high pass filter
+It does the opposite of LPF so simply we can create it 
+by subtracting the LPF from 1 (HP = 1- LP). 
+The filter removes the constant brightness regions 
+and leave the regions with rapid brightness 
+transitions.  
+![Screenshot (1464)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/4a5c9846-6f0b-4bf6-8841-ff223a156b4c)  
+Result  
+![Screenshot (1465)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/228b1168-499e-4bb4-a339-a63f02a69281)  
+##### parameters
+ The parameter D0 represents the radius of the cut off circle as it get larger the image will 
+be less smoothed in LPF and more sharper in HPF.  
+###  Hybrid Image:
+We upload 2 images apply high & low filter to them,
+then choose option :  
+• Low pass image1 + High pass image2  
+• High pass image1 + Low pass image2  
+o Uploaded Images  
+![Screenshot (1466)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/59ffd716-08bf-4195-9231-de0e21d0d1e4)  
+
+##### 1) High pass image1 + Low pass image2
+![Screenshot (1467)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/e86cc745-c664-4163-b106-16fc0bf5f513)  
+##### 2) Low pass image1 + High pass image2
+![Screenshot (1469)](https://github.com/MayarFayez/CV_-HPF-LPF_-Techniques-/assets/93496610/f1861000-5401-42c7-a267-f3303197dff8)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
