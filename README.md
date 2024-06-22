@@ -5,7 +5,6 @@ A small web application based app developed with python and streamlit, to apply 
 
 ## Requirements:
 • Python 3.
-
 • Streamlit 1.13.0
 • Numpy 1.23.4
 • Scipy 1.9.2
