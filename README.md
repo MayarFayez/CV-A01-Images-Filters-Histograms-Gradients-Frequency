@@ -14,7 +14,7 @@ A small web application based app developed with python and streamlit, to apply 
 ## Running command:
 Streamlit run server.py 
 
-# The UI contains three main tabs filtering, histogram and hybrid images.
+-The UI contains three main tabs filtering, histogram and hybrid images.
 
 # Tab1:
  Noise
