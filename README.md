@@ -4,12 +4,12 @@
 A small web application based app developed with python and streamlit, to apply different image processing techniques.
 
 ## Requirements:
-• Python 3.
-• Streamlit 1.13.0
-• Numpy 1.23.4
-• Scipy 1.9.2
-• Matplotlib 3.6.2
-• Seaborn 3.6.2
+• Python 3.  
+• Streamlit 1.13.0  
+• Numpy 1.23.4  
+• Scipy 1.9.2  
+• Matplotlib 3.6.2  
+• Seaborn 3.6.2  
 
 ## Running command:
 Streamlit run server.py 
@@ -17,7 +17,10 @@ Streamlit run server.py
 -The UI contains three main tabs filtering, histogram and hybrid images.
 
 # Tab1:
- Noise
- Filters
- Edge masks
+• Noise  
+• Filters  
+• Edge masks
+### Noise:
+1. Uniform noise
+Using uniform distribution
 
